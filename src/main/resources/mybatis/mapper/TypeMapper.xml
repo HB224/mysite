@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mysite.ghb.administrator.mapper.TypeMapper">
+
+    <select id="listType" resultType="com.mysite.ghb.entity.Type">
+        select * from typetable
+    </select>
+
+
+    <delete id="deleteType" parameterType="Long">
+        delete from typetable where id=#{id}
+    </delete>
+
+    <insert id="saveType" parameterType="com.mysite.ghb.entity.Type">
+        INSERT INTO `mysite`.`typetable` (`id`, `name`) VALUES (#{id}, #{name});
+    </insert>
+
+    <select id="getType" resultType="com.mysite.ghb.entity.Type">
+        select * from typetable where id=#{id}
+    </select>
+
+    <update id="updateType" parameterType="Map">
+        UPDATE `mysite`.`typetable` SET `name` = #{type.name} WHERE `id` = #{id};
+    </update>
+
+    <select id="getTypeByName" resultType="com.mysite.ghb.entity.Type">
+        select * from typetable where name =#{name}
+    </select>
+
+<!--查询只返回type-name、id，blog-id,blog的其他信息不返回，也不使用-->
+    <select id="listTypeTop" resultMap="Type">
+        select a.id as blog_id ,type_id  as id ,name as name from blogtable a  left JOIN typetable b ON a.type_id=b.id
+    </select>
+    <resultMap id="Type" type="com.mysite.ghb.entity.Type">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <collection property="blogs" resultMap="getTypeBlog">
+        </collection>
+    </resultMap>
+    <resultMap id="getTypeBlog" type="com.mysite.ghb.entity.Blog">
+        <result property="id" column="blog_id" />
+    </resultMap>
+
+
+</mapper>

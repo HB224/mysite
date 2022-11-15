@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mysite.ghb.administrator.mapper.TagMapper">
+
+    <select id="listTag" resultType="com.mysite.ghb.entity.Tag">
+        select * from tagtable
+    </select>
+
+
+    <delete id="deleteTag" parameterType="Long">
+        delete from tagtable where id=#{id}
+    </delete>
+
+    <insert id="saveTag" parameterType="com.mysite.ghb.entity.Tag">
+        INSERT INTO `mysite`.`tagtable` (`id`, `name`) VALUES (#{id}, #{name});
+    </insert>
+
+    <select id="getTag" resultType="com.mysite.ghb.entity.Tag">
+        select * from tagtable where id=#{id}
+    </select>
+
+    <update id="updateTag" parameterType="Map">
+        UPDATE `mysite`.`tagtable` SET `name` = #{type.name} WHERE `id` = #{id};
+    </update>
+
+    <select id="getTagByName" resultType="com.mysite.ghb.entity.Tag">
+        select * from tagtable where name =#{name}
+    </select>
+
+
+
+</mapper>

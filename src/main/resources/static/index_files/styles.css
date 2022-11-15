@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    background: url('./back.jpg') no-repeat;
+    background-size: cover;
+    height:100%;
+    width:100%;
+    position: absolute;
+}
+div.content_main{
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+div.content_main div.form {text-align: center;width: 600px;margin-bottom: 10%;}
+
+div.content_main ul.buttons {margin: 0;padding: 0;}
+
+div.content_main ul.buttons li {
+    display: inline-block;
+    list-style: none;
+}
+
+div.content_main ul.buttons li a {
+    padding:20px;
+    margin: 0 5px;
+    display: block;
+    background: #2f4958;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 1px 1px 3px #000;
+}
+
+div.content_main ul.buttons li a:hover {
+    background: #1c2b33;
+}
+
+.row.max-height {
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+
+.row.max-height > .col-xs-12{
+    height: 100%;
+    min-height:600px;
+}
+
+.col-xs-12.profile_line {
+    background: #3e3e3e;
+    position: relative;
+}
+
+.col-xs-12.load_line {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile_line .profile {
+    text-align: center;
+    padding: 20px;
+    margin-top:20px;
+    background: #313131;
+    color: #fff;
+}
+
+.profile_line .option_but {
+	margin-top:50px;
+}
+
+.profile_line .instruct_but {
+	margin-top:50px;
+}
+
+.profile_line .profile .login {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.profile_line .profile .sinch{
+	color:#9a9a9a;
+	font-size:12px;
+}
+
+.profile_line .down{
+	position:absolute;
+	bottom:10px;
+	text-align:center;
+	width:100%;
+	color:#fff;
+}
+
+div#searchsuggestions > div {
+    background: #fff;
+    border: 3px #52b3d9 solid;
+    padding: 5px;
+    max-height: 200px;
+    overflow: auto;
+	color: #000;
+}
+
+div#searchsuggestions > div > ul {
+    margin: 0;
+    padding: 0;
+}
+
+div#searchsuggestions > div > ul > li {
+    
+list-style: none;
+    
+padding: 5px;
+    
+border-bottom: 1px rgba(82, 179, 217, 0.21) solid;
+    
+cursor: pointer;
+    
+transition: 0.3s;
+}
+div#searchsuggestions > div > ul > li.none{
+	cursor: default;
+}
+div#searchsuggestions > div > ul > li.none:hover{
+	background: none;
+}
+div#searchsuggestions > div > ul > li > span{
+	color:#a0a0a0;
+}
+
+div#searchsuggestions > div > ul > li:hover{
+	
+background: #f7f7f7;
+}
+
+div#searchsuggestions > div > ul > li:last-child {
+	border-bottom: none;
+}
+
+div#searchsuggestions > div > ul > li > a {
+	color:#000;
+	display:block;
+}
+
+div#blockAccess {
+    border: 1px #cecece solid;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+}
+
+.gameAccess > li > h4{
+	line-height:34px;
+}
+
+.gameAccess > li > h4 > button {
+	float:right;
+}
+
+ul.usersAccess {
+    list-style: none;
+    border: 1px #cecece solid;
+    padding: 10px;
+}
+
+li.userLine button {
+    float: right;
+}
+
+ul.usersAccess li.userLine {
+    overflow: hidden;
+    padding: 0 20px;
+    padding-top: 5px;
+    border-bottom: 1px #ccc solid;
+}
+
+ul.usersAccess li.userLine:last-child {
+    border: none;
+}
+
+ul.usersAccess li label{
+	font-size: 17px;
+	line-height: 34px;
+}
+
+div#load_block {
+    padding: 0 10%;
+    text-align: center;
+}

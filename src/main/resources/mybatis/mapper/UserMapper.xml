@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mysite.ghb.mapper.UserMapper">
+    <select id="getUserByid" resultType="com.mysite.ghb.entity.User">
+        select * from usertable where userid = #{id}
+    </select>
+    <select id="getUserByMail" resultType="com.mysite.ghb.entity.User">
+        select * from usertable where  `e-mail`=#{value};
+    </select>
+   <!-- <select id="getUserByMail" resultType="com.mysite.ghb.entity.User">
+    select * from usertable where  `e-mail`=#{value};
+    </select>-->
+
+
+    <insert id="addUser" parameterType="com.mysite.ghb.entity.User">
+        INSERT INTO `mysite`.`usertable` (`userid`, `username`, `mobile`, `e-mail`, `password`, `createDate`, `ipaddress`, `status`)
+                                        VALUES (#{userid},#{username}, #{mobile}, #{email}, #{password}, #{createDate}, #{ipAddress}, #{status});
+          </insert>
+    <update id="updateUserIp" parameterType="Map">
+        UPDATE `mysite`.`usertable` SET `ipaddress` = #{ipAddress}  WHERE `userid` = #{id};
+    </update>
+    <delete id="deleteUser" parameterType="int">
+
+    </delete>
+
+</mapper>

@@ -1,0 +1,35 @@
+#spingboot
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: true
+  redis:
+    host: localhost
+    port: 6379
+  datasource:
+    url: jdbc:mysql://localhost:3306/mysite?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: ghb224
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+
+
+logging:
+  level:
+    root: info
+    com.mysite.ghb: debug
+  file:
+    name: log/mysite_pro.log
+
+
+
+#分页pageHelper
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+
+
+server:
+  port: 80

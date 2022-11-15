@@ -1,0 +1,113 @@
+2021-10-17 17:21:05.852  INFO 14524 --- [main] com.MySiteApplication                    : Starting MySiteApplication using Java 1.8.0_291 on ghbcomputer with PID 14524 (G:\mysite\target\classes started by HP in G:\MySite)
+2021-10-17 17:21:05.862  INFO 14524 --- [main] com.MySiteApplication                    : The following profiles are active: dev
+2021-10-17 17:21:08.934  INFO 14524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-17 17:21:08.937  INFO 14524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-17 17:21:10.229  INFO 14524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1275 ms. Found 0 Redis repository interfaces.
+2021-10-17 17:21:11.391  INFO 14524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.mysite.ghb.config.ShiroConfig$$EnhancerBySpringCGLIB$$61feb9a5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-17 17:21:12.448  INFO 14524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'hashedCredentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-17 17:21:12.489  INFO 14524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-17 17:21:12.497  INFO 14524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$ff32e04e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-17 17:21:12.505  INFO 14524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-17 17:21:12.516  INFO 14524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-17 17:21:12.544  INFO 14524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-17 17:21:12.561  INFO 14524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-17 17:21:13.166  INFO 14524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-17 17:21:13.173  INFO 14524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-17 17:21:13.181  INFO 14524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-17 17:21:13.185  INFO 14524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-17 17:21:13.186  INFO 14524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userServiceImp' of type [com.mysite.ghb.service.UserServiceImp] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-17 17:21:13.186  INFO 14524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroRealm' of type [com.mysite.ghb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-17 17:21:13.200  INFO 14524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-17 17:21:13.590  INFO 14524 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-10-17 17:21:13.599  INFO 14524 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-17 17:21:13.599  INFO 14524 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-10-17 17:21:13.706  INFO 14524 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-17 17:21:13.707  INFO 14524 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7775 ms
+2021-10-17 17:21:14.487  INFO 14524 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-10-17 17:21:14.607  INFO 14524 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-10-17 17:21:14.677  INFO 14524 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-10-17 17:21:14.752  WARN 14524 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-10-17 17:21:15.170  INFO 14524 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-10-17 17:21:15.171  INFO 14524 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-10-17 17:21:15.184  INFO 14524 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-10-17 17:21:15.210  INFO 14524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-10-17 17:21:15.335  INFO 14524 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_1
+2021-10-17 17:21:15.337  INFO 14524 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editInputUsingGET_1
+2021-10-17 17:21:15.342  INFO 14524 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: inputUsingGET_1
+2021-10-17 17:21:15.347  INFO 14524 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: postUsingPOST_1
+2021-10-17 17:21:15.351  INFO 14524 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_2
+2021-10-17 17:21:15.352  INFO 14524 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editInputUsingGET_2
+2021-10-17 17:21:15.355  INFO 14524 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPostUsingPOST_1
+2021-10-17 17:21:15.357  INFO 14524 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: inputUsingGET_2
+2021-10-17 17:21:15.360  INFO 14524 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: postUsingPOST_2
+2021-10-17 17:21:15.377  INFO 14524 --- [main] com.MySiteApplication                    : Started MySiteApplication in 10.148 seconds (JVM running for 12.122)
+2021-10-17 17:21:35.638  INFO 14524 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-17 17:21:35.638  INFO 14524 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-17 17:21:35.639  INFO 14524 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-17 17:21:35.687  INFO 14524 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-17 17:21:36.901  INFO 14524 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-17 17:21:36.923 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.BlogMapper.listBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM blogtable 
+2021-10-17 17:21:36.923 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.m.BlogMapper.listBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM blogtable 
+2021-10-17 17:21:36.941 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.m.BlogMapper.listBlog_COUNT      : ==> Parameters: 
+2021-10-17 17:21:36.941 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.BlogMapper.listBlog_COUNT      : ==> Parameters: 
+2021-10-17 17:21:37.319 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.m.BlogMapper.listBlog_COUNT      : <==      Total: 1
+2021-10-17 17:21:37.319 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.BlogMapper.listBlog_COUNT      : <==      Total: 1
+2021-10-17 17:21:37.327 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.BlogMapper.listBlog       : ==>  Preparing: SELECT * FROM blogtable order by 'updateTime' desc LIMIT ? 
+2021-10-17 17:21:37.327 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.mapper.BlogMapper.listBlog       : ==>  Preparing: SELECT * FROM blogtable order by 'updateTime' desc LIMIT ? 
+2021-10-17 17:21:37.327 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.mapper.BlogMapper.listBlog       : ==> Parameters: 5(Integer)
+2021-10-17 17:21:37.327 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.BlogMapper.listBlog       : ==> Parameters: 5(Integer)
+2021-10-17 17:21:37.363 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.mapper.BlogMapper.getType        : ====>  Preparing: select * from typetable where id=? 
+2021-10-17 17:21:37.363 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.BlogMapper.getType        : ====>  Preparing: select * from typetable where id=? 
+2021-10-17 17:21:37.363 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.BlogMapper.getType        : ====> Parameters: 1448251203694718977(Long)
+2021-10-17 17:21:37.363 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.mapper.BlogMapper.getType        : ====> Parameters: 1448251203694718977(Long)
+2021-10-17 17:21:37.448 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.BlogMapper.getType        : <====      Total: 1
+2021-10-17 17:21:37.448 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.mapper.BlogMapper.getType        : <====      Total: 1
+2021-10-17 17:21:37.449 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.mapper.BlogMapper.listBlog       : <==      Total: 1
+2021-10-17 17:21:37.449 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.BlogMapper.listBlog       : <==      Total: 1
+2021-10-17 17:21:37.475 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.mapper.TypeMapper.listTypeTop    : ==>  Preparing: select a.id as blog_id ,type_id as id ,name as name from blogtable a left JOIN typetable b ON a.type_id=b.id 
+2021-10-17 17:21:37.475 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.TypeMapper.listTypeTop    : ==>  Preparing: select a.id as blog_id ,type_id as id ,name as name from blogtable a left JOIN typetable b ON a.type_id=b.id 
+2021-10-17 17:21:37.475 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.mapper.TypeMapper.listTypeTop    : ==> Parameters: 
+2021-10-17 17:21:37.475 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.TypeMapper.listTypeTop    : ==> Parameters: 
+2021-10-17 17:21:37.481 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.TypeMapper.listTypeTop    : <==      Total: 1
+2021-10-17 17:21:37.481 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.mapper.TypeMapper.listTypeTop    : <==      Total: 1
+2021-10-17 17:21:37.482 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.mapper.TagMapper.listTag         : ==>  Preparing: select * from tagtable 
+2021-10-17 17:21:37.482 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.TagMapper.listTag         : ==>  Preparing: select * from tagtable 
+2021-10-17 17:21:37.482 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.mapper.TagMapper.listTag         : ==> Parameters: 
+2021-10-17 17:21:37.482 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.TagMapper.listTag         : ==> Parameters: 
+2021-10-17 17:21:37.519 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.mapper.TagMapper.listTag         : <==      Total: 5
+2021-10-17 17:21:37.519 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.TagMapper.listTag         : <==      Total: 5
+2021-10-17 17:21:37.551 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.m.B.listRecommendBlogTop_COUNT   : ==>  Preparing: SELECT count(0) FROM blogtable WHERE recommend = true 
+2021-10-17 17:21:37.552 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.B.listRecommendBlogTop_COUNT   : ==>  Preparing: SELECT count(0) FROM blogtable WHERE recommend = true 
+2021-10-17 17:21:37.552 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.m.B.listRecommendBlogTop_COUNT   : ==> Parameters: 
+2021-10-17 17:21:37.552 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.B.listRecommendBlogTop_COUNT   : ==> Parameters: 
+2021-10-17 17:21:37.554 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.B.listRecommendBlogTop_COUNT   : <==      Total: 1
+2021-10-17 17:21:37.554 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.m.B.listRecommendBlogTop_COUNT   : <==      Total: 1
+2021-10-17 17:21:37.555 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.m.B.listRecommendBlogTop         : ==>  Preparing: SELECT * FROM blogtable WHERE recommend = true order by 'updateTime' desc LIMIT ? 
+2021-10-17 17:21:37.555 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.B.listRecommendBlogTop         : ==>  Preparing: SELECT * FROM blogtable WHERE recommend = true order by 'updateTime' desc LIMIT ? 
+2021-10-17 17:21:37.555 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.m.B.listRecommendBlogTop         : ==> Parameters: 8(Integer)
+2021-10-17 17:21:37.555 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.B.listRecommendBlogTop         : ==> Parameters: 8(Integer)
+2021-10-17 17:21:37.557 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.B.listRecommendBlogTop         : <==      Total: 1
+2021-10-17 17:21:37.557 DEBUG 14524 --- [http-nio-8080-exec-1] c.m.g.a.m.B.listRecommendBlogTop         : <==      Total: 1
+2021-10-17 17:21:43.172 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.BlogMapper.listBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM blogtable 
+2021-10-17 17:21:43.173 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.BlogMapper.listBlog_COUNT      : ==> Parameters: 
+2021-10-17 17:21:43.174 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.BlogMapper.listBlog_COUNT      : <==      Total: 1
+2021-10-17 17:21:43.175 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.BlogMapper.listBlog       : ==>  Preparing: SELECT * FROM blogtable order by 'updateTime' desc LIMIT ? 
+2021-10-17 17:21:43.175 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.BlogMapper.listBlog       : ==> Parameters: 5(Integer)
+2021-10-17 17:21:43.177 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.BlogMapper.getType        : ====>  Preparing: select * from typetable where id=? 
+2021-10-17 17:21:43.177 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.BlogMapper.getType        : ====> Parameters: 1448251203694718977(Long)
+2021-10-17 17:21:43.178 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.BlogMapper.getType        : <====      Total: 1
+2021-10-17 17:21:43.178 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.BlogMapper.listBlog       : <==      Total: 1
+2021-10-17 17:21:43.179 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.TypeMapper.listTypeTop    : ==>  Preparing: select a.id as blog_id ,type_id as id ,name as name from blogtable a left JOIN typetable b ON a.type_id=b.id 
+2021-10-17 17:21:43.179 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.TypeMapper.listTypeTop    : ==> Parameters: 
+2021-10-17 17:21:43.180 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.TypeMapper.listTypeTop    : <==      Total: 1
+2021-10-17 17:21:43.181 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.TagMapper.listTag         : ==>  Preparing: select * from tagtable 
+2021-10-17 17:21:43.181 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.TagMapper.listTag         : ==> Parameters: 
+2021-10-17 17:21:43.182 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.mapper.TagMapper.listTag         : <==      Total: 5
+2021-10-17 17:21:43.183 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.B.listRecommendBlogTop_COUNT   : ==>  Preparing: SELECT count(0) FROM blogtable WHERE recommend = true 
+2021-10-17 17:21:43.183 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.B.listRecommendBlogTop_COUNT   : ==> Parameters: 
+2021-10-17 17:21:43.184 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.B.listRecommendBlogTop_COUNT   : <==      Total: 1
+2021-10-17 17:21:43.185 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.B.listRecommendBlogTop         : ==>  Preparing: SELECT * FROM blogtable WHERE recommend = true order by 'updateTime' desc LIMIT ? 
+2021-10-17 17:21:43.185 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.B.listRecommendBlogTop         : ==> Parameters: 8(Integer)
+2021-10-17 17:21:43.186 DEBUG 14524 --- [http-nio-8080-exec-5] c.m.g.a.m.B.listRecommendBlogTop         : <==      Total: 1
+2021-10-17 17:23:47.568  INFO 14524 --- [http-nio-8080-exec-2] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1631334365,1631361659,1631406452; NMTID=00OoA8VfMPawG7X00AJrx7JKDPVkJsAAAF8EIBIuA] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.

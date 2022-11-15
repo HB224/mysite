@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.7, maximum-scale=1.0, user-scalable=0" charset="UTF-8">
+    <title>您所访问的页面可能已经被删除 </title>
+    <link rel="shortcut icon" href="ico/title.ico" th:href="@{/ico/title.ico}" type="image/x-icon">
+    <script src="error/phaser.min.js" th:src="@{/error/phaser.min.js}" ></script>
+    <script src="error/catch-the-cat.js" th:src="@{/error/catch-the-cat.js}"></script>
+    <style>
+        #catch-the-cat {i
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+
+<body>
+<div align="center">
+    <p>
+<font size="3" face="黑体">您所访问的页面不存在或者已删除，
+    <a href="/"><b>点击回到首页 </b></a>。</font>
+    </p>
+    <p>
+        <font size="3" face="黑体">游戏《圈小猫》</font>
+    </p>
+
+</div>
+<div class="container">
+    <div id="catch-the-cat"></div>
+    <script>
+        window.game = new CatchTheCatGame({
+            w: 11,
+            h: 11,
+            r: 20,
+            backgroundColor: 0xeeeeee,
+            parent: 'catch-the-cat',
+            statusBarAlign: 'center',
+            credit: '404页面- (灵感来源于吾爱破解)'
+        });
+    </script>
+</div>
+</body>
+
+</html>

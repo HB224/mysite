@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mysite.ghb.administrator.mapper.BlogMapper">
+
+    <select id="listBlog" resultMap="Blog">
+        select * from blogtable
+    </select>
+    <resultMap id="Blog" type="com.mysite.ghb.entity.Blog">
+        <result column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="createDate" property="createDate"/>
+        <result column="coverPicture" property="coverPicture"/>
+        <result column="flag" property="flag"/>
+        <result column="thumbs" property="thumbs"/>
+        <result column="recommend" property="recommend"/>
+        <result column="shareStatement" property="shareStatement"/>
+        <result column="updateTime" property="updateTime"/>
+        <result column="views" property="views"/>
+        <result column="description" property="description"/>
+        <result column="appreciation" property="appreciation"/>
+        <result column="commentabled" property="commentabled"/>
+        <!--对象使用assiociation-->
+        <!--集合用collection-->
+        <association property="type" column="type_id"
+                     javaType="com.mysite.ghb.entity.Type"
+                     select="getType">
+        </association>
+    </resultMap>
+    <select id="getType" resultType="com.mysite.ghb.entity.Type">
+        select * from typetable where id=#{type_id}
+    </select>
+    <select id="getUser" resultType="com.mysite.ghb.entity.User">
+        select * from usertable where userid=#{id}
+    </select>
+
+
+    <select id="searchBlog" resultMap="Blog">
+        select * from blogtable where (title=#{title}  or #{title} ='')
+                                and (type_id =#{typeId}  or #{typeId} IS NULL)
+                                and (recommend=#{recommend} or )
+    </select>
+    <select id="searchBlogByTypeId" resultMap="Blog">
+        select * from blogtable where type_id =#{typeId}
+    </select>
+
+
+
+
+
+    <delete id="deleteBlog" parameterType="Long">
+        delete from blogtable where id=#{id}
+    </delete>
+
+
+    <select id="getBlog" resultType="com.mysite.ghb.entity.Blog">
+        select * from blogtable where id=#{id}
+    </select>
+
+    <update id="updateBlog" parameterType="Map">
+        UPDATE `mysite`.`blogtable` SET `title` =#{blog.title}, `content` = #{blog.content}, `coverPicture` = #{blog.coverPicture}, `flag` = #{blog.flag}, `appreciation` = #{blog.appreciation},
+                                        `shareStatement` =#{blog.shareStatement}, `commentabled` =#{blog.commentabled}, `published` = #{blog.published}, `recommend` = #{blog.recommend},
+                                        `updateTime` = #{blog.updateTime},
+                                        `description` = #{blog.description}, `type_id` = #{blog.type.id}, `user_id` = #{blog.user.id}
+        WHERE `id` = #{id};
+    </update>
+
+    <insert id="saveBlog" parameterType="com.mysite.ghb.entity.Blog" >
+    INSERT INTO `mysite`.`blogtable` (`id`,     `title`, `content`, `coverPicture`, `flag`, `appreciation`, `shareStatement`, `commentabled`, `published`, `recommend`, `createDate`, `updateTime`, `description`, `type_id`, `user_id`)
+                                VALUES (#{id}, #{title}, #{content}, #{coverPicture},#{flag},#{appreciation},#{shareStatement} ,#{commentabled},#{published},#{recommend},#{createDate},#{updateTime},#{description},#{type.id},#{user.id});
+    </insert>
+
+
+    <!--查询被推荐的BLog-->
+    <select id="listRecommendBlogTop" resultType="com.mysite.ghb.entity.Blog">
+        select  * from blogtable where recommend=true
+    </select>
+
+<!--通过标题或内容查询-->
+    <select id="searchBlogByString" resultMap="Blog">
+        select  * from blogtable where title like #{query} or content like #{query}
+    </select>
+
+
+
+<!--查询blog的年份并归档-->
+    <select id="getGroupYears" resultType="java.lang.String">
+        select DATE_FORMAT(createDate,'%Y')as year from blogtable  GROUP BY year ORDER BY year DESC
+    </select>
+    <select id="listBlogByYear" resultMap="Blog">
+        SELECT * from blogtable where  DATE_FORMAT(createDate,'%Y')=#{year}
+    </select>
+    <select id="countBlog" resultType="java.lang.Integer">
+        SELECT COUNT(id) from blogtable
+    </select>
+</mapper>

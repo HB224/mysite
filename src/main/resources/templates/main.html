@@ -1,0 +1,541 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!--      pjax强制重载-->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="format-detection" content="telphone=no,email=no">
+    <meta name="keywords" content="小游网,二次元博客,个人网站,萌萌的网站">
+    <meta name="description" itemprop="description" content="一个分享个人笔记,个人生活经历,分享各种有趣资源,实用技能的个人二次元博客网站">
+    <meta property="og:title" content="我的个人小站-小游网">
+    <meta property="og:site_name" content="我的个人小站-小游网">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="一个分享个人笔记,个人生活经历,分享各种有趣资源,实用技能的个人二次元博客网站">
+    <meta property="og:url" content="https://baidu.com">
+    <meta name="twitter:title" content="我的个人小站-小游网">
+    <meta name="twitter:description" content="一个分享个人笔记,个人生活经历,分享各种有趣资源,实用技能的个人二次元博客网站">
+    <meta name="twitter:card" content="summary">
+    <!-- 允许访问站外资源 -->
+    <meta name="referrer" content="no-referrer">
+    <link rel="icon" type="image/x-icon" href="https://img.xiaoyou66.com/images/2020/04/12/TcLE.png">
+    <title>我的个人小站-小游网</title>
+    <meta name="robots" content="max-image-preview:large">
+
+    <link href="/main_file/all.css" rel="stylesheet">
+    <link href="/main_file/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/main_file/index.css">
+    <script src="/main_file/vue.js"></script><script src="/main_file/index.js">
+    </script><script type="text/javascript" src="/main_file/jquery.min.js">
+    </script><script src="/main_file/xiaoyou.js"></script>
+    <link rel="stylesheet" type="text/css" href="/main_file/theme.css">
+
+
+    <style>
+        .to-to.p {background-image: url(https://xiaoyou66.com/themes/xtheme/static/image/space-to-top.png);}
+        @font-face{font-family:DiaryFont;src:url(https://xiaoyou66.com/themes/xtheme/static/fonts/diary.ttf)}
+        .m-level{background-image:url(https://xiaoyou66.com/themes/xtheme/staticr/image/level.png)}
+    </style>
+    <script>
+        xy.net.server = '/api/v3/';
+        let globalIsLogin = false;
+        let globalUserInfo = 'null';
+    </script>
+
+    <input type="hidden" id="_w_tusk">
+    <script type="text/javascript" src="chrome-extension://dbjbempljhcmhlfpfacalomonjpalpko/scripts/inspector.js"></script>
+</head>
+<body>
+<div>
+    <div id="navigation">
+        <div class="mini-header m-header">
+            <div class="mini-header__content mini-header--login">
+                <div class="nav-link">
+                    <ul class="nav-link-ul">
+                        <li class="nav-link-item">
+                            <a class="link" href="www.xyz666.com">主站</a>                            </li>
+                    </ul>
+                </div>
+                <div id="search-box" class="nav-search-box"><div class="nav-search"><div id="nav_searchform"><input type="text" placeholder="输入你想搜索的内容" class="nav-search-keyword"> <div class="nav-search-btn"><button type="submit" class="nav-search-submit"><i class="el-icon-search"></i></button></div></div> <ul class="search-suggest suggest" style="display: none;"></ul></div></div>
+                <div>
+                    <div>
+                        <div class="nav-user-center">
+                            <div class="user-con logout">
+                                <div class="item">
+                                    <div class="mini-login van-popover__reference" aria-describedby="van-popover-6081" tabindex="0">
+                                      <span class="name">
+                                        <img alt="" src="/main_file/akari.jpg" class="logout-face">
+                                        <a href="/user/login" class="txt name">登录</a>
+                                        <a href="/user/register/" class="txt name">注册</a>
+                                      </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-image:url(http://img.xiaoyou66.com/images/2021/01/23/VlmhX.png)" class="bili-banner">
+            <div class="taper-line"></div>
+            <a href="https://xiaoyou66.com/#" target="_blank" class="banner-link"></a>
+        </div>
+    </div>
+
+    <div id="main" class="show">
+        <div id="bg" style="background-image: url(https://img.xiaoyou66.com/images/2020/02/06/tKb5.jpg)"></div>
+        <div style="display: flex;justify-content: center">
+            <div class="col-md-2 col-sm-3 col-0 div-box-content">
+                <div id="sidebar-left" class="giligili-left">
+                    <div class="notice-panel">
+                        <div class="textwidget">
+                            <style>
+                                #user-card-info{height:92px}
+                                #user-card-info a{width:33.3%;height:92px;text-align:center;float:left;cursor:pointer}
+                                #user-card-info a:hover{color:#4c4c4c}
+                                #user-card-info .num{letter-spacing:0;padding-top:35px;font-weight:700;font-size:14px;color:#00a1d6}
+                                .links-of-author{display:flex;flex-wrap:wrap;justify-content:center;padding:10px 5px}
+                                .links-of-author-item{margin:5px 4px 0;border-radius:50%}
+                                .links-of-author span :hover{background:#97dffd}
+                                .links-of-author-item a{display:block;text-decoration:none;overflow:visible}
+                                .links-of-author-item a{max-width:216px;box-sizing:border-box;display:inline-block;margin-right:0;margin-bottom:0;padding:0 5px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;border-bottom:none;vertical-align:middle}
+                                .links-of-author-item a{font-size:16px;width:42px;height:42px;line-height:42px;border-radius:42px;color:rgba(0,0,0,.5);background-color:rgba(0,0,0,.1);font-style:normal;display:flex;vertical-align:middle;align-items:center;justify-content:center}
+                                #user-card{text-align:center}
+                                .photo-background{border-top-right-radius:9px;border-top-left-radius:9px;height:120px}
+                                .widget_kratos_about .photo-background{border-top-right-radius:9px;border-top-left-radius:9px;height:120px;background:no-repeat center center;-webkit-background-size:cover;background-size:cover}
+                                .photo-wrapper{width:100%}
+                                .photo-wrapper img{left:133px;margin:-50px 0 0;width:90px;height:90px;border:rgba(255,255,255,.4) 4px solid;border-radius:50%;transition:all .3s;cursor:pointer}
+                                .photo-wrapper img:hover{transform:scale(1.3) rotate(360deg)}
+                            </style>
+                            <div id="user-card" class="tools-item">
+                                <div class="photo-background">
+                                    <div class="photo-background" style="background:url(https://img.xiaoyou66.com/images/2020/03/02/y0qR.png) no-repeat center center;-webkit-background-size:cover;background-size:cover">
+                                    </div>
+                                </div>
+                                <div class="photo-wrapper clearfix">
+                                    <div class="photo-wrapper-tip text-center">
+                                        <img class="about-photo" src="/main_file/tTSY.jpg" alt="">
+                                    </div>
+                                </div>
+                                <p class="desc">
+                                    二次元技术宅
+                                </p>
+                                <div id="user-card-info">
+                                    <a id="user-card-article" class="giligili-left">
+                                        <p class="num">213</p>
+                                        <p class="text">文章</p>
+                                    </a>
+                                    <a id="user-card-shuoshuo" class="giligili-left">
+                                        <p class="num">127</p>
+                                        <p class="text">日记</p>
+                                    </a>
+                                    <a id="user-card-comment" class="giligili-left">
+                                        <p class="num">2029</p>
+                                        <p class="text">评论</p>
+                                    </a>
+                                </div>
+                                <div class="textwidget">
+                                    <div class="links-of-author motion-element">
+
+            <span class="links-of-author-item">
+                <a href="https://space.bilibili.com/343147393" target="_blank" title="B站">
+                    <svg t="1618756434016" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8683" width="200" height="200"><path d="M777.514667 131.669333a53.333333 53.333333 0 0 1 0 75.434667L728.746667 255.829333h49.92A160 160 0 0 1 938.666667 415.872v320a160 160 0 0 1-160 160H245.333333A160 160 0 0 1 85.333333 735.872v-320a160 160 0 0 1 160-160h49.749334L246.4 207.146667a53.333333 53.333333 0 1 1 75.392-75.434667l113.152 113.152c3.370667 3.370667 6.186667 7.04 8.448 10.965333h137.088c2.261333-3.925333 5.12-7.68 8.490667-11.008l113.109333-113.152a53.333333 53.333333 0 0 1 75.434667 0z m1.152 231.253334H245.333333a53.333333 53.333333 0 0 0-53.205333 49.365333l-0.128 4.010667v320c0 28.117333 21.76 51.157333 49.365333 53.162666l3.968 0.170667h533.333334a53.333333 53.333333 0 0 0 53.205333-49.365333l0.128-3.968v-320c0-29.44-23.893333-53.333333-53.333333-53.333334z m-426.666667 106.666666c29.44 0 53.333333 23.893333 53.333333 53.333334v53.333333a53.333333 53.333333 0 1 1-106.666666 0v-53.333333c0-29.44 23.893333-53.333333 53.333333-53.333334z m320 0c29.44 0 53.333333 23.893333 53.333333 53.333334v53.333333a53.333333 53.333333 0 1 1-106.666666 0v-53.333333c0-29.44 23.893333-53.333333 53.333333-53.333334z" p-id="8684" fill="#1296db"></path></svg>
+                </a>
+            </span>
+
+
+                                        <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/xiao-you-89-91" target="_blank" title="知乎">
+                    <svg t="1618756491562" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8980" width="200" height="200"><path d="M571.1 254v527.7h52.3l19 66.2 92-66.2h129.4V254H571.1z m233.3 467.8h-60.8L666 781l-16.9-59.2h-16v-409h171.3v409zM540.7 552.6s0-56.4-27.8-59.5c-27.9-3.1-114.5 0-114.5 0V317.5h128.4s-1.5-58-26.3-58H291.6l32.5-95.6s-52.6 3.1-71.2 36c-18.5 33-78.9 202.2-78.9 202.2s20.1 9.4 54.2-15.7c34-25.1 44.9-69 44.9-69l61.9-3.1 1.5 178.7s-106.8-1.6-128.4 0c-21.7 1.6-34 59.5-34 59.5h162.5s-13.9 98.7-55.7 170.8C239 795.5 160.1 851.9 160.1 851.9s57.2 23.5 112.9-9.4 96.8-177.7 96.8-177.7l130.7 162s11.9-77.1-2.1-98.9c-14-21.8-90.4-109.3-90.4-109.3l-33.3 29.8 23.7-95.8h142.3z" fill="#49C0FB" p-id="8981"></path></svg>
+                </a>
+            </span>
+
+
+                                        <span class="links-of-author-item">
+                <a href="https://github.com/xiaoyou66" target="_blank" title="github">
+                    <svg t="1618756294042" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6453" width="200" height="200"><path d="M512 85.333333C276.266667 85.333333 85.333333 276.266667 85.333333 512a426.410667 426.410667 0 0 0 291.754667 404.821333c21.333333 3.712 29.312-9.088 29.312-20.309333 0-10.112-0.554667-43.690667-0.554667-79.445333-107.178667 19.754667-134.912-26.112-143.445333-50.133334-4.821333-12.288-25.6-50.133333-43.733333-60.288-14.933333-7.978667-36.266667-27.733333-0.554667-28.245333 33.621333-0.554667 57.6 30.933333 65.621333 43.733333 38.4 64.512 99.754667 46.378667 124.245334 35.2 3.754667-27.733333 14.933333-46.378667 27.221333-57.045333-94.933333-10.666667-194.133333-47.488-194.133333-210.688 0-46.421333 16.512-84.778667 43.733333-114.688-4.266667-10.666667-19.2-54.4 4.266667-113.066667 0 0 35.712-11.178667 117.333333 43.776a395.946667 395.946667 0 0 1 106.666667-14.421333c36.266667 0 72.533333 4.778667 106.666666 14.378667 81.578667-55.466667 117.333333-43.690667 117.333334-43.690667 23.466667 58.666667 8.533333 102.4 4.266666 113.066667 27.178667 29.866667 43.733333 67.712 43.733334 114.645333 0 163.754667-99.712 200.021333-194.645334 210.688 15.445333 13.312 28.8 38.912 28.8 78.933333 0 57.045333-0.554667 102.912-0.554666 117.333334 0 11.178667 8.021333 24.490667 29.354666 20.224A427.349333 427.349333 0 0 0 938.666667 512c0-235.733333-190.933333-426.666667-426.666667-426.666667z" fill="#000000" p-id="6454"></path></svg>
+                </a>
+            </span>
+
+
+                                        <span class="links-of-author-item">
+                <a href="https://steamcommunity.com/id/xiaoyou66" target="_blank" title="Steam">
+                  <svg t="1618756310790" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7236" width="200" height="200"><path d="M1008 512c0 274-222.4 496-496.8 496-227.6 0-419.2-152.6-478-360.8l190.4 78.6c12.8 64.2 69.8 112.8 137.8 112.8 78.4 0 143.8-64.8 140.4-147l169-120.4c104.2 2.6 191.6-81.8 191.6-187 0-103.2-84-187-187.4-187s-187.4 84-187.4 187v2.4L369.2 558c-31-1.8-61.4 6.8-87 24.2L16 472.2C36.4 216.8 250.2 16 511.2 16 785.6 16 1008 238 1008 512zM327.4 768.6l-61-25.2a105.58 105.58 0 0 0 54.4 51.6c53.8 22.4 115.6-3.2 138-56.8 10.8-26 11-54.6 0.2-80.6-10.8-26-31-46.4-57-57.2-25.8-10.8-53.4-10.4-77.8-1.2l63 26c39.6 16.4 58.4 61.8 41.8 101.4-16.6 39.8-62 58.4-101.6 42z m347.6-259.8c-68.8 0-124.8-56-124.8-124.6s56-124.6 124.8-124.6 124.8 56 124.8 124.6-55.8 124.6-124.8 124.6z m0.2-31.2c51.8 0 93.8-42 93.8-93.6 0-51.8-42-93.6-93.8-93.6s-93.8 42-93.8 93.6c0.2 51.6 42.2 93.6 93.8 93.6z" fill="" p-id="7237"></path></svg>
+                </a>
+            </span>
+
+
+                                        <span class="links-of-author-item">
+                <a href="https://twitter.com/xiaoyou625" target="_blank" title="twitter">
+                    <svg t="1618756220031" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5703" width="200" height="200"><path d="M295.2 338c120.2 61 221.7 57.4 221.7 57.4s-38.5-134.8 80.5-194.6 200.9 41 200.9 41 20.8-5.7 36.2-11.4c15.5-5.7 37.8-15.9 37.8-15.9l-36.7 65.8 56.5-6s-7 10.2-29.6 31-31.9 31.6-31.9 31.6 8.1 162.3-77 287.2C668.5 749 558.6 824 398.9 839.8c-159.7 15.8-263.7-49.2-263.7-49.2s69.8-4 114.3-21.1S358 707.4 358 707.4s-91-28.1-123.7-59.8c-32.7-31.6-40.8-50.4-40.8-50.4l89.8-1.2s-94.5-50.4-121.3-90.3-30.3-78.5-30.3-78.5l69.1 28s-57.4-78.4-65.6-139.4c-8.2-61 10.5-93.8 10.5-93.8s29.3 55 149.5 116z" fill="#5DD7FC" p-id="5704"></path></svg>
+                </a>
+            </span>
+
+
+                                        <span class="links-of-author-item">
+                <a href="https://t.me/joinchat/R1egY8rUUKzRMngz" target="_blank" title="telegram">
+                    <svg t="1618756386689" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7896" width="200" height="200"><path d="M512 16C238 16 16 238 16 512s222 496 496 496 496-222 496-496S786 16 512 16z m243.6 339.8l-81.4 383.6c-6 27.2-22.2 33.8-44.8 21l-124-91.4-59.8 57.6c-6.6 6.6-12.2 12.2-25 12.2l8.8-126.2 229.8-207.6c10-8.8-2.2-13.8-15.4-5l-284 178.8-122.4-38.2c-26.6-8.4-27.2-26.6 5.6-39.4l478.2-184.4c22.2-8 41.6 5.4 34.4 39z" p-id="7897" fill="#1296db"></path></svg>
+                </a>
+            </span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="notice-panel tools-item">
+                        <h4 class="widget-title">
+                            其他客户端        </h4>
+                        <div class="textwidget side-padding">
+                            <style>
+                                .side-other{display:flex;align-items:center}
+                                .side-other .item-wechat:hover+#wechat-img{display:block!important}
+                                .side-other .item-phone:hover+#phone-img{display:block!important}
+                                .side-other .item-h5:hover+#h5-img{display:block!important}
+                                #h5-img,#phone-img,.side-other #wechat-img{width:300px;height:300px;transition:all .3s;display:none;position:absolute;z-index:500;margin-left:-77px;margin-top:-400px;box-shadow:0 5px 5px rgba(0,0,0,.2);border-radius:12px}
+                                .side-other #phone-img{margin-left:1px}
+                                .side-other #h5-img{margin-left:91px}
+                                .side-other .item:hover{transform:scale(1.2)}
+                                .side-other .item{width:80px;height:80px;margin:10px;display:flex;flex-direction:column;align-items:center;cursor:pointer;transition:all .3s}
+                                .side-other .item .item-title{font-size:12px;color:#999}
+                                .side-other .item-img{width:40px;height:40px;border-radius:50%;display:flex;justify-content:center;align-items:center;margin-bottom:8px}
+                            </style>
+                            <div class="side-other">
+
+                                <div class="item item-wechat">
+                                    <svg class="item-img" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="200" height="200"><path d="M512 1024a512 512 0 1 1 512-512 512.537815 512.537815 0 0 1-512 512z m0-945.478992a433.478992 433.478992 0 1 0 433.478992 433.478992 434.285714 434.285714 0 0 0-433.478992-433.478992zM389.915966 773.378151c-87.12605 0-157.579832-66.151261-157.579832-147.361344a142.736134 142.736134 0 0 1 20.436975-72.605042 154.998319 154.998319 0 0 1 89.815126-67.764706 86.910924 86.910924 0 0 1 26.890757-4.302521 39.798319 39.798319 0 0 1 0 79.596638h-2.689076a77.768067 77.768067 0 0 0-45.714286 32.806723 58.084034 58.084034 0 0 0-8.605042 31.193277c0 37.109244 34.420168 67.226891 77.445378 67.226891a85.189916 85.189916 0 0 0 42.487395-11.294117 64.537815 64.537815 0 0 0 34.957984-55.932774V394.218487c0-51.630252 27.966387-98.420168 75.294117-125.310924a165.70084 165.70084 0 0 1 81.747899-21.512605c87.12605 0 157.579832 66.151261 157.579832 147.361345a142.736134 142.736134 0 0 1-20.436975 72.605042 154.998319 154.998319 0 0 1-89.815126 67.764705 91.912605 91.912605 0 0 1-26.890756 4.302521 39.798319 39.798319 0 0 1 0-79.596638h2.689076c20.436975-6.453782 37.109244-17.747899 46.252101-33.344538a58.084034 58.084034 0 0 0 8.605042-31.193277c0-37.109244-34.957983-67.226891-77.445379-67.226891a85.189916 85.189916 0 0 0-42.487394 11.294118 64.537815 64.537815 0 0 0-34.957984 55.932773v231.260504c0 51.630252-27.966387 98.420168-75.294117 125.310924a170.487395 170.487395 0 0 1-82.285715 21.512605z" fill="#1afa29"></path></svg>
+                                    <div class="item-title">
+                                        微信小程序
+                                    </div>
+                                </div>
+                                <img id="wechat-img" alt="" src="/main_file/Rgmt.jpg">
+
+
+                                <div class="item item-phone">
+                                    <svg class="item-img" viewBox="0 0 1026 1024" xmlns="http://www.w3.org/2000/svg" width="200" height="200"><path d="M2.438 0h975.238v975.238H2.438z" fill="#2FC2B0" fill-opacity="0" p-id="2948"></path><path d="M266.386 774.095c0 20.675 18.725 37.547 41.594 37.547h41.643V943.25c0 31.208 27.843 56.369 62.415 56.369 34.524 0 62.415-25.21 62.415-56.369V811.69h83.188v131.56c0 31.208 27.892 56.369 62.415 56.369 34.524 0 62.416-25.21 62.416-56.369V811.69h41.594c22.918 0 41.593-16.92 41.593-37.546V398.19H266.386v375.856zM162.377 398.238c-34.523 0-62.415 25.21-62.415 56.37v263.118c0 31.208 27.892 56.37 62.415 56.37 34.524 0 62.415-25.162 62.415-56.37V454.607c0-31.207-27.891-56.369-62.415-56.369z m707.292 0c-34.524 0-62.416 25.21-62.416 56.37v263.118c0 31.208 27.892 56.37 62.416 56.37 34.523 0 62.415-25.162 62.415-56.37V454.607c0-31.207-27.892-56.369-62.415-56.369z m-206.75-219.477l54.271-49.054a17.457 17.457 0 0 0 0-26.478 22.333 22.333 0 0 0-29.306 0l-61.586 55.393a269.897 269.897 0 0 0-110.25-23.454c-39.986 0-77.386 8.63-110.885 23.65l-61.782-55.784a22.333 22.333 0 0 0-29.354 0 17.457 17.457 0 0 0 0 26.478l54.515 49.25c-61.78 41.154-102.156 107.275-102.156 181.881h499.322c0-74.752-40.618-140.922-102.79-181.882zM432.81 285.501h-41.594v-37.547h41.594v37.547z m208.018 0h-41.594v-37.547h41.594v37.547z" fill="#2FC2B0"></path></svg>
+                                    <div class="item-title">
+                                        安卓APP
+                                    </div>
+                                </div>
+                                <img id="phone-img" alt="" src="/main_file/RYKe.png">
+
+
+                                <div class="item item-h5">
+                                    <svg class="item-img" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" p-id="5892" width="200" height="200"><path d="M136.533333 85.333333l68.266667 768 306.773333 85.333334 307.626667-85.333334 68.266667-768H136.533333z m590.933334 241.493334h-362.666667l11.093333 122.453333H716.8l-23.893333 266.24-180.906667 49.92-180.906667-50.346667-11.093333-124.586666h68.266667l6.4 72.533333 117.333333 31.573333 3.413333-0.853333 113.493334-30.72 12.8-145.066667h-328.533334L290.133333 258.56h443.733334l-6.4 68.266667z" fill="#e44d26" opacity=".99"></path></svg>
+                                    <div class="item-title">
+                                        H5界面
+                                    </div>
+                                </div>
+                                <img id="h5-img" alt="" src="/main_file/RTTQ.png">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 col-sm-2 col-11 div-box-content">
+                <div id="post-list" class="giligili-left">
+                    <div class="b-wrap">
+                        <div class="primary-menu-itnl">
+                            <div id="primaryPageTab" class="page-tab report-wrap-module">
+                                <ul class="con">
+                                    <li>
+                                        <a href="https://xiaoyou66.com/">
+                                            <div class="navigation-home round home">
+                                                <i class="fa fa-home"></i>
+                                            </div>
+                                            <span>首页</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <span class="tab-line-itnl"></span>
+                            <div id="post-list-category" class="channel-menu-itnl report-wrap-module"><div class="item"><span><div role="tooltip" id="el-popover-4115" aria-hidden="true" class="el-popover el-popper" tabindex="0" style="width: 100px; display: none;"><!----><a href="https://xiaoyou66.com/?category=0201">STC51笔记</a><a href="https://xiaoyou66.com/?category=0202">STM32笔记</a><a href="https://xiaoyou66.com/?category=0203">模块使用</a><a href="https://xiaoyou66.com/?category=0204">Esp8266Arduino</a></div><span class="el-popover__reference-wrapper"><a href="javascript:void(0);" class="name el-popover__reference" aria-describedby="el-popover-4115" tabindex="0"><span>硬件奇谈<em>29</em></span></a></span></span></div> <div class="item"><span><div role="tooltip" id="el-popover-5176" aria-hidden="true" class="el-popover el-popper" tabindex="0" style="width: 100px; display: none;"><!----><a href="https://xiaoyou66.com/?category=0100">大学笔记</a><a href="https://xiaoyou66.com/?category=1100">随笔</a><a href="https://xiaoyou66.com/?category=1300">观后感</a><a href="https://xiaoyou66.com/?category=1200">日记</a><a href="https://xiaoyou66.com/?category=%e6%af%94%e8%b5%9b%e7%9b%b8%e5%85%b3">比赛相关</a></div><span class="el-popover__reference-wrapper"><a href="javascript:void(0);" class="name el-popover__reference" aria-describedby="el-popover-5176" tabindex="0"><span>个人日常<em>93</em></span></a></span></span></div> <div class="item"><span><div role="tooltip" id="el-popover-1994" aria-hidden="true" class="el-popover el-popper" tabindex="0" style="width: 100px; display: none;"><!----><a href="https://xiaoyou66.com/?category=3400">硬件作品</a><a href="https://xiaoyou66.com/?category=3200">安卓相关</a><a href="https://xiaoyou66.com/?category=3300">博客主题</a><a href="https://xiaoyou66.com/?category=%e5%b0%8f%e7%a8%8b%e5%ba%8f-3000">小程序</a><a href="https://xiaoyou66.com/?category=%e7%bd%91%e7%ab%99%e7%9b%b8%e5%85%b3">网站相关</a><a href="https://xiaoyou66.com/?category=%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F">博客系统</a></div><span class="el-popover__reference-wrapper"><a href="javascript:void(0);" class="name el-popover__reference" aria-describedby="el-popover-1994" tabindex="0"><span>个人项目<em>47</em></span></a></span></span></div> <div class="item"><span><div role="tooltip" id="el-popover-2915" aria-hidden="true" class="el-popover el-popper" tabindex="0" style="width: 100px; display: none;"><!----><a href="https://xiaoyou66.com/?category=0303">PHP</a><a href="https://xiaoyou66.com/?category=0305">web前端</a><a href="https://xiaoyou66.com/?category=0304">Python</a><a href="https://xiaoyou66.com/?category=%e7%ae%97%e6%b3%95">算法</a><a href="https://xiaoyou66.com/?category=c-c">C/C++</a><a href="https://xiaoyou66.com/?category=java">JAVA</a><a href="https://xiaoyou66.com/?category=go">GO</a><a href="https://xiaoyou66.com/?category=%e5%b0%8f%e7%a8%8b%e5%ba%8f">小程序</a></div><span class="el-popover__reference-wrapper"><a href="javascript:void(0);" class="name el-popover__reference" aria-describedby="el-popover-2915" tabindex="0"><span>程序人生<em>33</em></span></a></span></span></div> <div class="item"><span><div role="tooltip" id="el-popover-7690" aria-hidden="true" class="el-popover el-popper" tabindex="0" style="width: 100px; display: none;"><!----><a href="https://xiaoyou66.com/?category=linux%e7%b3%bb%e7%bb%9f%e7%a0%94%e7%a9%b6">Linux系统研究</a><a href="https://xiaoyou66.com/?category=%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%8a%98%e8%85%be%e8%ae%b0">服务器折腾记</a><a href="https://xiaoyou66.com/?category=wordpress%e6%94%b9%e9%80%a0">Wordpress改造</a><a href="https://xiaoyou66.com/?category=%e7%bd%91%e7%bb%9c%e7%9b%b8%e5%85%b3">网络研究</a><a href="https://xiaoyou66.com/?category=%e7%88%ac%e8%99%ab%e7%9b%b8%e5%85%b3">爬虫进阶</a><a href="https://xiaoyou66.com/?category=%e5%90%8e%e6%9c%9f%e5%88%b6%e4%bd%9c">后期制作</a><a href="https://xiaoyou66.com/?category=%e7%bd%91%e7%ab%99%e7%9b%b8%e5%85%b3-%e5%90%84%e7%a7%8d%e6%8a%98%e8%85%be">网站相关</a><a href="https://xiaoyou66.com/?category=%e6%b8%b8%e6%88%8f%e7%9b%b8%e5%85%b3">游戏相关</a><a href="https://xiaoyou66.com/?category=%E7%A1%AC%E4%BB%B6%E6%8A%98%E8%85%BE">硬件折腾</a></div><span class="el-popover__reference-wrapper"><a href="javascript:void(0);" class="name el-popover__reference" aria-describedby="el-popover-7690" tabindex="0"><span>各种折腾<em>61</em></span></a></span></span></div> <div class="item"><span><div role="tooltip" id="el-popover-870" aria-hidden="true" class="el-popover el-popper" tabindex="0" style="width: 100px; display: none;"><!----><a href="https://xiaoyou66.com/?category=%E6%89%A9%E5%B1%95%E7%9B%B8%E5%85%B3">扩展相关</a><a href="https://xiaoyou66.com/?category=%E5%AE%9E%E7%94%A8%E6%8A%80%E8%83%BD">实用技能</a><a href="https://xiaoyou66.com/?category=%E5%AE%9E%E7%94%A8%E9%A1%B9%E7%9B%AE">实用项目</a><a href="https://xiaoyou66.com/?category=%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%95">分类测试</a></div><span class="el-popover__reference-wrapper"><a href="javascript:void(0);" class="name el-popover__reference" aria-describedby="el-popover-870" tabindex="0"><span>实用内容<em>9</em></span></a></span></span></div> <div class="item"><span><div role="tooltip" id="el-popover-3333" aria-hidden="true" class="el-popover el-popper" tabindex="0" style="width: 100px; display: none;"><!----></div><span class="el-popover__reference-wrapper"><a href="javascript:void(0);" class="name el-popover__reference" aria-describedby="el-popover-3333" tabindex="0"><span>软件使用<em>0</em></span></a></span></span></div></div>
+                        </div>
+                    </div>
+                    <div id="blog-post" class="blog-post">
+
+
+                        <div class="panel">
+                            <img class="stick" alt="" src="/main_file/sticky.png">
+                            <div class="index-post-img">
+                                <a href="https://xiaoyou66.com/archives/2665" class="link">
+                                    <div style="background-image:url(https://xiaoyou66.com/assets/images/background/img381.jpg)" class="item-thumb"></div>
+                                </a>
+                            </div>
+                            <div class="post-meta wrapper-lg p-b-none">
+                                <h2 class="m-t-none index-post-title">
+
+                                </h2>
+                                <p class="summary l-h-2x text-muted">
+                                    内容     </p>
+                                <div class="line line-lg b-b b-light"></div>
+                                <div class="text-muted post-item-foot-icon">
+                                    <span><i class="fa fa-clock"></i>${user.getUserid()}</span>
+                                        <span><i class="fas fa-comments"></i>12条评论</span>
+                                        <span><i class="fa fa-eye"></i>852次阅读</span>
+                                        <span class="good"><i class="fa fa-thumbs-up"></i>17人点赞</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div id="post-list-pagination">
+                            <div class="el-pagination is-background">
+                                <button type="button" disabled="disabled" class="btn-prev">
+                                    <i class="el-icon el-icon-arrow-left"></i>
+                                </button>
+                                <ul class="el-pager">
+                                    <li class="number active">1</li>
+                                    <!----><li class="number">2</li>
+                                    <li class="number">3</li><li class="number">4</li><li class="number">5</li><li class="number">6</li>
+                                    <li class="el-icon more btn-quicknext el-icon-more"></li><li class="number">41</li></ul><button type="button" class="btn-next"><i class="el-icon el-icon-arrow-right"></i></button></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-0 div-box-content">
+                <div id="sidebar-right" class="giligili-left sidebar">
+                    <div class="notice-panel tools-item">
+                        <h4 class="widget-title">
+                            公告栏        </h4>
+                        <div class="textwidget side-padding">
+                            <div>
+                                目前系统还在开发中~并不是稳定版本，还希望大家积极反馈bug
+                            </div>        </div>
+                    </div>
+                    <div class="notice-panel tools-item">
+                        <h4 class="widget-title">
+                            更多功能        </h4>
+                        <div class="textwidget side-padding">
+                            <style>
+                                .side-more{padding:0;display:flex;width:100%;flex-wrap:wrap}
+                                .side-more .nav-link-item{align-items:center;display:flex;list-style:none;padding:5px 0 5px 0;flex:1;width:50%;min-width:50%;border-radius:5px;font-size:18px;font-weight:600}
+                                .side-more .nav-link-item:hover{background:#f4f4f4;cursor:pointer}
+                                .side-more .nav-link-item a{color:#4c4c4c;text-decoration:none}
+                                .side-more .nav-link-item a:hover{color:#618eba}
+                            </style>
+                            <div class="side-more">
+
+        <span class="nav-link-item">
+              <a href="https://xiaoyou66.com/diary">
+                  <i style="color:#5FB878" class="far fa-calendar-alt"></i>
+                  日记
+              </a>
+        </span>
+
+                                <span class="nav-link-item">
+              <a href="https://xiaoyou66.com/more/sponsors">
+                  <i style="color:#FFB800" class="fas fa-donate"></i>
+                  赞助博主
+              </a>
+        </span>
+
+                                <span class="nav-link-item">
+              <a href="https://xiaoyou66.com/more/friends">
+                  <i style="color:#01AAED" class="fas fa-child"></i>
+                  友人帐
+              </a>
+        </span>
+
+                                <span class="nav-link-item">
+              <a href="https://xiaoyou66.com/more/animations">
+                  <i style="color:#f25d8e" class="fas fa-ghost"></i>
+                  我的追番
+              </a>
+        </span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notice-panel tools-item">
+                        <h4 class="widget-title">
+                            最近评论        </h4>
+                        <div class="textwidget side-padding">
+                            <style>
+                                .recent-comments a{color:#4c4c4c;text-decoration:none}
+                                .recent-comments a:hover{color:#618eba}
+                                .recent-comments .comment-img{width:45px;height:45px}
+                                .recent-comments .comment-listitem{list-style:none;padding:12px 0!important;border-bottom:1px solid #e5e9ef}
+                                .recent-comments .comment-user{font-size:15px}
+                                .recent-comments .comment-avatar{float:left}
+                                .recent-comments .comment-avatar img{float:left;margin-right:8px;width:45px;height:45px;border-radius:50%;margin-top:-3px;-webkit-box-shadow:0 .125rem 1.0625rem 0 rgba(0,0,0,.1);box-shadow:0 .125rem 1.0625rem 0 rgba(0,0,0,.1)}
+                                .recent-comments .comment-author{float:left;margin-right:10px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;max-width:95px}
+                                .recent-comments .comment-content{font-size:16px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;width:75%}
+                                .recent-comments .widget a{color:#4c4c4c;text-decoration:none;-webkit-transition:color .3s;transition:color .3s}
+                            </style>
+                            <div class="recent-comments">
+
+                                <li class="comment-listitem">
+                                    <div class="comment-user">
+        <span class="comment-avatar">
+          <img alt="" src="/main_file/66.jpeg" class="avatar avatar-50 photo" height="50" width="50">
+        </span>
+                                        <div class="comment-author">
+                                            设计笔记
+                                        </div>
+                                        <span class="comment-date">2021-07-05 09:41:42</span>
+                                    </div>
+                                    <div class="comment-content-link">
+                                        <a href="https://xiaoyou66.com/archives/2665#comment-">
+                                            <div class="comment-content">
+                                                终于更新了，一直在期待新版本，大佬辛苦了
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="comment-listitem">
+                                    <div class="comment-user">
+        <span class="comment-avatar">
+          <img alt="" src="/main_file/42.jpeg" class="avatar avatar-50 photo" height="50" width="50">
+        </span>
+                                        <div class="comment-author">
+                                            xyzw
+                                        </div>
+                                        <span class="comment-date">2021-06-27 17:49:43</span>
+                                    </div>
+                                    <div class="comment-content-link">
+                                        <a href="https://xiaoyou66.com/archives/2440#comment-">
+                                            <div class="comment-content">
+                                                很厉害
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="comment-listitem">
+                                    <div class="comment-user">
+        <span class="comment-avatar">
+          <img alt="" src="/main_file/tgmq.jpg" class="avatar avatar-50 photo" height="50" width="50">
+        </span>
+                                        <div class="comment-author">
+                                            夕綺Yuuki
+                                        </div>
+                                        <span class="comment-date">2021-06-21 23:20:21</span>
+                                    </div>
+                                    <div class="comment-content-link">
+                                        <a href="https://xiaoyou66.com/archives/2664#comment-">
+                                            <div class="comment-content">
+                                                太强了~~！
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="comment-listitem">
+                                    <div class="comment-user">
+        <span class="comment-avatar">
+          <img alt="" src="/main_file/756c00f8c2f59.png" class="avatar avatar-50 photo" height="50" width="50">
+        </span>
+                                        <div class="comment-author">
+                                            小游
+                                        </div>
+                                        <span class="comment-date">2021-06-19 17:14:04</span>
+                                    </div>
+                                    <div class="comment-content-link">
+                                        <a href="https://xiaoyou66.com/archives/2664#comment-">
+                                            <div class="comment-content">
+                                                评论测试 <img class="comment-img" src="/main_file/1.png">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="comment-listitem">
+                                    <div class="comment-user">
+        <span class="comment-avatar">
+          <img alt="" src="/main_file/8.jpeg" class="avatar avatar-50 photo" height="50" width="50">
+        </span>
+                                        <div class="comment-author">
+                                            JacksonXE
+                                        </div>
+                                        <span class="comment-date">2021-06-14 20:37:09</span>
+                                    </div>
+                                    <div class="comment-content-link">
+                                        <a href="https://xiaoyou66.com/archives/2626#comment-">
+                                            <div class="comment-content">
+                                                急需
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="comment-listitem">
+                                    <div class="comment-user">
+        <span class="comment-avatar">
+          <img alt="" src="/main_file/19.jpeg" class="avatar avatar-50 photo" height="50" width="50">
+        </span>
+                                        <div class="comment-author">
+                                            JacksonXE
+                                        </div>
+                                        <span class="comment-date">2021-06-14 20:36:59</span>
+                                    </div>
+                                    <div class="comment-content-link">
+                                        <a href="https://xiaoyou66.com/archives/2626#comment-">
+                                            <div class="comment-content">
+                                                是否可以增加rss订阅，继续
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="comment-listitem">
+                                    <div class="comment-user">
+        <span class="comment-avatar">
+          <img alt="" src="/main_file/19.jpeg" class="avatar avatar-50 photo" height="50" width="50">
+        </span>
+                                        <div class="comment-author">
+                                            rsd
+                                        </div>
+                                        <span class="comment-date">2021-06-13 09:11:13</span>
+                                    </div>
+                                    <div class="comment-content-link">
+                                        <a href="https://xiaoyou66.com/archives/2618#comment-">
+                                            <div class="comment-content">
+                                                快递代发，礼品代发就发5a单号网www.danhw.com
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        /*设置当前页数和总页数*/
+        let globalTotal =  41;
+        let globalCurrent =  1;
+    </script>
+    <div id="footer" class="footers">
+        <div class="footer-item" style="float: left">
+            <p>
+                ©2020<a href="https://xiaoyou66.com/">小游网</a>. All Rights Reserved.|本站已萌萌哒(✪ω✪)运行<span id="span_dt_dt">844天14小时51分37秒</span>
+            </p>
+        </div>
+        <div class="footer-item" style="float:right">
+            <p>
+                Powered by <a target="_blank" href="https://xblog.xiaoyou66.com/">XBlog</a>|
+                <a href="https://xiaoyou66.com/sitemap" rel="external nofollow" target="_blank">SITEMAP |</a>
+                <span style="color: rgba(255, 255, 255, .5);">
+                    <a href="https://beian.miit.gov.cn/">
+                        </a><a href="http://beian.miit.gov.cn/publish/query/indexFirst.action" target="_blank">赣ICP备19003009号</a>
+                </span>
+            </p>
+        </div>
+        <div id="to-top" class="to-top" style="background-position-x: -40px;"></div>
+    </div>
+</div>
+<script>
+    var globalBuildTime = '03/20/2019 00:00:00';
+</script>
+<script type="text/javascript" src="/main_file/theme.js"></script>
+<script>const url = "www.baidu.com";</script>
+</body></html>
